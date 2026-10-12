@@ -17,7 +17,7 @@ export function verifyToken(token) {
 const baseOptions = {
   httpOnly: true,
   secure: env.isProd,
-  sameSite: "lax",
+  sameSite:env.isProd ? "none" : "lax",
   path: "/",
 };
 
